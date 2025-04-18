@@ -2,10 +2,10 @@
   const NOTICE_ID = 'better-features-notice';
 
   function addNotice() {
-    // 1) Find the logout form in the account menu
-    const logoutForm = document.querySelector('form.logout-form');
-    if (!logoutForm) {
-      // Menu not open yet → retry
+    // 1) Find the search bar container
+    const searchContainer = document.querySelector('header div[role="search"]');
+    if (!searchContainer) {
+      // If search bar isn't available yet, retry
       return setTimeout(addNotice, 500);
     }
 
@@ -19,18 +19,10 @@
     notice.style.color = '#2ea44f';
     notice.style.fontWeight = 'bold';
     notice.style.padding = '4px 8px';
-    notice.style.marginTop = '4px';
+    notice.style.marginRight = '10px';  // Space between the notice and search bar
 
-    // 4) Wrap in a <div role="none"> to match GitHub’s menu structure
-    const wrapper = document.createElement('div');
-    wrapper.setAttribute('role', 'none');
-    wrapper.appendChild(notice);
-
-    // 5) Insert it immediately after the logout form container
-    const menuItemContainer = logoutForm.closest('div[role="none"]');
-    if (menuItemContainer && menuItemContainer.parentNode) {
-      menuItemContainer.parentNode.insertBefore(wrapper, menuItemContainer.nextSibling);
-    }
+    // 4) Insert it to the left of the search bar
+    searchContainer.insertBefore(notice, searchContainer.firstChild);
   }
 
   // Kick it off
