@@ -1,26 +1,38 @@
 (function () {
+  const NOTICE_ID = 'better-features-notice';
+
   function addNotice() {
-    const settingsMenu = document.querySelector('[aria-label="Account settings"] ul');
-    if (!settingsMenu) {
-      setTimeout(addNotice, 500);
-      return;
+    // 1) Find the logout form in the account menu
+    const logoutForm = document.querySelector('form.logout-form');
+    if (!logoutForm) {
+      // Menu not open yet → retry
+      return setTimeout(addNotice, 500);
     }
 
-    const existingNotice = document.getElementById('better-features-notice');
-    if (existingNotice) return;
+    // 2) Prevent adding the notice twice
+    if (document.getElementById(NOTICE_ID)) return;
 
-    const li = document.createElement('li');
-    li.id = 'better-features-notice';
-    li.textContent = '✅ GitHub Better Features is active';
-    li.style.color = '#2ea44f';
-    li.style.fontWeight = 'bold';
-    li.style.padding = '4px 8px';
+    // 3) Build your notice
+    const notice = document.createElement('div');
+    notice.id = NOTICE_ID;
+    notice.textContent = '✅ GitHub Better Features is active';
+    notice.style.color = '#2ea44f';
+    notice.style.fontWeight = 'bold';
+    notice.style.padding = '4px 8px';
+    notice.style.marginTop = '4px';
 
-    settingsMenu.appendChild(li);
+    // 4) Wrap in a <div role="none"> to match GitHub’s menu structure
+    const wrapper = document.createElement('div');
+    wrapper.setAttribute('role', 'none');
+    wrapper.appendChild(notice);
+
+    // 5) Insert it immediately after the logout form container
+    const menuItemContainer = logoutForm.closest('div[role="none"]');
+    if (menuItemContainer && menuItemContainer.parentNode) {
+      menuItemContainer.parentNode.insertBefore(wrapper, menuItemContainer.nextSibling);
+    }
   }
 
-  // Run the feature logic
+  // Kick it off
   addNotice();
-
-  // Add more GitHub-enhancing features here
 })();
