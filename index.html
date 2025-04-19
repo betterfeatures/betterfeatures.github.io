@@ -38,7 +38,27 @@
   <h1>🚀 Enhance Your GitHub Experience</h1>
   <p>Drag the button below to your bookmarks bar:</p>
   <p>
-    <a class="bookmarklet" href="javascript:(function(){const e=%22better-features-notice%22;if(document.getElementById(e))return;const t=document.querySelector('header.Header');if(!t)return;const n=t.querySelector('form.js-site-search-form');if(!n)return;const o=document.createElement('div');o.id=e,o.textContent=%22✅ GitHub Better Features is active%22,o.style.color=%22#2ea44f%22,o.style.fontWeight=%22bold%22,o.style.marginLeft=%2212px%22,o.style.display=%22inline-block%22,o.style.fontSize=%2214px%22,n.parentNode.insertBefore(o,n.nextSibling);})();">GitHub Enhancer</a>
+    <a class="bookmarklet" href="javascript:(function(){
+  const NOTICE_ID = 'better-features-notice';
+  if (document.getElementById(NOTICE_ID)) return;
+
+  const form = document.querySelector('form[role="search"]');
+  if (!form) return;
+
+  const notice = document.createElement('div');
+  notice.id = NOTICE_ID;
+  notice.textContent = '✅ GitHub Better Features is active';
+  notice.style.color = '#2ea44f';
+  notice.style.fontWeight = 'bold';
+  notice.style.marginLeft = '12px';
+  notice.style.display = 'inline-block';
+  notice.style.fontSize = '14px';
+  notice.style.alignSelf = 'center';
+
+  const container = form.parentNode;
+  container.appendChild(notice);
+})();
+">GitHub Enhancer</a>
   </p>
   <p>Then, navigate to GitHub and click the bookmark to activate new features!</p>
 
