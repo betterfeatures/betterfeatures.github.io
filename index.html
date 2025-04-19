@@ -20,13 +20,21 @@
       background: #2ea44f;
       color: white;
       padding: 0.6em 1em;
-      margin: 1em 0;
+      margin: 1em 0 0.5em 0;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
     }
     .bookmarklet:hover {
       background: #22863a;
+    }
+    .report-link {
+      margin-top: -0.5em;
+      font-size: 0.9em;
+    }
+    .report-link a {
+      color: #d73a49;
+      text-decoration: underline;
     }
     ul {
       margin-top: 1em;
@@ -36,12 +44,14 @@
 </head>
 <body>
   <h1>🚀 Enhance Your GitHub Experience</h1>
-  <p>Drag the button below to your bookmarks bar:</p>
+
   <p>
-    <a class="bookmarklet" href="<p>Drag the button below to your bookmarks bar:</p>
-<p>
-  <a class="bookmarklet" href="javascript:(function()%7Bconst%20NOTICE_ID%3D'better-features-notice'%3Bif(document.getElementById(NOTICE_ID))return%3Bconst%20form%3Ddocument.querySelector('form%5Brole%3D%22search%22%5D')%3Bif(!form)return%3Bconst%20notice%3Ddocument.createElement('div')%3Bnotice.id%3DNOTICE_ID%3Bnotice.textContent%3D'%E2%9C%85%20GitHub%20Better%20Features%20is%20active'%3Bnotice.style.color%3D'%232ea44f'%3Bnotice.style.fontWeight%3D'bold'%3Bnotice.style.marginLeft%3D'12px'%3Bnotice.style.display%3D'inline-block'%3Bnotice.style.fontSize%3D'14px'%3Bnotice.style.alignSelf%3D'center'%3Bform.parentNode.appendChild(notice)%3B%7D)()%3B">GitHub Enhancer</a>
-</p>
+    <a class="bookmarklet" href="javascript:(function()%7Bconst%20NOTICE_ID%3D'better-features-notice'%3Bif(document.getElementById(NOTICE_ID))return%3Bconst%20form%3Ddocument.querySelector('form%5Brole%3D%22search%22%5D')%3Bif(!form)return%3Bconst%20notice%3Ddocument.createElement('div')%3Bnotice.id%3DNOTICE_ID%3Bnotice.textContent%3D'%E2%9C%85%20GitHub%20Better%20Features%20is%20active'%3Bnotice.style.color%3D'%232ea44f'%3Bnotice.style.fontWeight%3D'bold'%3Bnotice.style.marginLeft%3D'12px'%3Bnotice.style.display%3D'inline-block'%3Bnotice.style.fontSize%3D'14px'%3Bnotice.style.alignSelf%3D'center'%3Bform.parentNode.appendChild(notice)%3B%7D)()%3B">GitHub Enhancer</a>
+  </p>
+
+  <p class="report-link">
+    <a href="mailto:your-email@example.com">Report Error</a>
+  </p>
 
   <p>Then, navigate to GitHub and click the bookmark to activate new features!</p>
 
