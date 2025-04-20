@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarklet Activated</title>
+    <script>
+        function bookmarklet() {
+            if (typeof jQuery != 'undefined') {
+                jQuery('body').prepend('<div style="background-color: #f0f0f0; padding: 10px; border: 1px solid #ccc; color: black;">Warning: Using bookmarklets to modify GitHub\'s interface may violate their terms of service.</div>');
+
+
+            } else {
+                var script = document.createElement('script');
+                script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
+                script.onload = function() {
+                    jQuery('body').prepend('<div style="background-color: #f0f0f0; padding: 10px; border: 1px solid #ccc; color: black;">Warning: Using bookmarklets to modify GitHub\'s interface may violate their terms of service.</div>');
+
+                };
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
+        }
+
+        //  Call the function
+        bookmarklet();
+
+    </script>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #336699;
+      }
+      p {
+        color: #555;
+        margin-bottom: 20px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Bookmarklet Activated</h1>
+    <p>This page was loaded by your bookmarklet.  The bookmarklet's JavaScript code has been executed.</p>
+    <p>The bookmarklet is designed to enhance your browsing experience with features like:</p>
+    <p>
+        Dark mode toggle for better night-time coding, <br>
+        Inline file size indicators in repositories, <br>
+        Copy branch name buttons on pull requests, <br>
+        Keyboard shortcuts for faster navigation, <br>
+        Auto-collapse outdated diffs in pull requests, <br>
+        One-click cloning with SSH or HTTPS, <br>
+        Highlighting of TODOs and FIXMEs in code, <br>
+        Enhanced issue templates with pre-filled labels, <br>
+        Improved search filters for repositories and issues.
+    </p>
+    <p>You can click "⚙️ GitHub Enhancer Settings" in the GitHub menu to disable certain features.</p>
+    <p>You can now close this page or return to the page where you used the bookmarklet.</p>
+</body>
+</html>
