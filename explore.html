@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Features Extensions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #337ab7;
+            margin-bottom: 20px;
+        }
+        .extension-container {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .extension-info {
+            flex-grow: 1;
+        }
+        .extension-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .extension-description {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .extension-drag {
+            background-color: #eee;
+            color: #777;
+            padding: 10px 15px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            text-decoration: none;
+            cursor: pointer; /* Normal click cursor */
+        }
+        /* Green Download Button */
+        .extension-drag.download-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .extension-drag:hover {
+            background-color: #ddd;
+            color: #555;
+        }
+        .extension-drag.download-btn:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .instructions {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+        .instructions h2 {
+            margin-top: 0;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 8px;
+        }
+
+        /* Centering the second button */
+        .coming-soon-btn {
+            text-align: center;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Better Features Extensions</h1>
+
+    <p>Drag the following links to your browser's bookmarks bar to add these handy tools!</p>
+
+    <div class="extension-container">
+        <div class="extension-info">
+            <div class="extension-name">GitHub Enhancer</div>
+            <div class="extension-description">
+                Adds a settings dialog to enhance your GitHub experience. <br>
+                <strong>Note:</strong> This is currently unusable. It's just a demo to get you used to the UI.
+            </div>
+        </div>
+        <!-- Updated Download link -->
+        <a href="https://betterfeatures.github.io/uploadedusercontent/GitHub%20Enhancer.zip" class="extension-drag download-btn" target="_blank">Download</a>
+    </div>
+
+    <div class="extension-container">
+        <div class="extension-info">
+            <div class="extension-name">Improved New Tab Extension</div>
+            <div class="extension-description">An extension that enhances the new tab page with useful widgets and shortcuts.</div>
+        </div>
+        <!-- Changed to "Coming Soon" -->
+        <div class="coming-soon-btn">Coming Soon</div>
+    </div>
+
+    <!-- New Troubleshooting Section (above the existing one) -->
+    <div class="instructions">
+        <h2>Troubleshooting for Download Issues</h2>
+        <ol>
+            <li>If the download doesn't start when you click the "Download" button, try refreshing the page and clicking again.</li>
+            <li>If that doesn't resolve the issue, please report the problem using the following link: 
+                <a href="https://form.typeform.com/to/GrJlNpUm" target="_blank">Report a problem</a>.
+            </li>
+        </ol>
+    </div>
+
+    <!-- New How to Import Extensions Section -->
+    <div class="instructions">
+        <h2>How to Import Extensions into Your Browser</h2>
+        <p>This section explains how to import extensions into your browser. These instructions are for Google Chrome, but you can also find guides for other browsers below.</p>
+        <ol>
+            <li>First, <strong>download</strong> the ZIP file by clicking the "Download" button above.</li>
+            <li>Once the ZIP file is downloaded, <strong>extract</strong> the folder to a location on your computer.</li>
+            <li>After extracting, locate the extracted folder (it will contain extension files, including a `.html`, `.js`, or similar file).</li>
+            <li>Next, open your <strong>Chrome browser</strong> and go to the Extensions page (chrome://extensions/).</li>
+            <li>Enable "Developer mode" at the top-right, then click "Load unpacked" and select the folder where the extracted extension files are located.</li>
+        </ol>
+        <p>For instructions on other browsers, please see the following links:</p>
+        <ul>
+            <li><a href="https://support.mozilla.org/en-US/kb/install-addon-file" target="_blank">How to Install Extensions in Firefox</a></li>
+            <li><a href="https://support.microsoft.com/en-us/microsoft-edge/add-extensions-to-microsoft-edge-ef8c9e8e-8b62-4057-a4a9-df70e9b85c24" target="_blank">How to Install Extensions in Microsoft Edge</a></li>
+            <li><a href="https://www.apple.com/safari/" target="_blank">How to Install Extensions in Safari</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
