@@ -1,0 +1,4 @@
+List of Admins
+Only includes trusted users with full access
+
+betterfeatures (https://github.com/betterfeatures/)
